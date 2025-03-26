@@ -2,7 +2,7 @@
   description = "swayhide - A window swallower for sway";
 
   inputs = {
-    nixpkgs.url = github:nixos/nixpkgs;
+    nixpkgs.url = "github:nixos/nixpkgs";
   };
 
   outputs = inputs:
@@ -21,7 +21,8 @@
           pname = "swayhide";
           version = "0.2.1";
           src = ./.;
-          cargoSha256 = "sha256-zsWixMdh5QHzjG8OdYVXQqjjuBDhTeqX7iAFeOyEOCk=";
+          useFetchCargoVendor = true;
+          cargoHash = "sha256-ng15mXfk3atT5/ELM47vpBneLZtzHdHDhCobrmlx3uQ=";
           nativeBuildInputs = with pkgs; [ installShellFiles ];
 
           postInstall = ''
